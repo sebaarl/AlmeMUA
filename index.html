@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,12 +22,12 @@
                 <img src="/img/Logos/PNG/Almendra_Logo_Mesa de trabajo 1.png" alt="">
             </a>
             <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
-                    <li class="nav__item"><a href="#share" class="nav__link">Servicios</a></li>
-                    <li class="nav__item"><a href="#decoration" class="nav__link">Sobre mi</a></li>
-                    <li class="nav__item"><a href="#accessory" class="nav__link">Trabajos</a></li>
-                    <li class="nav__item"><a href="#accessory" class="nav__link">Contacto</a></li>
+                <ul class="nav__list" id="list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link" id="link">Inicio</a></li>
+                    <li class="nav__item"><a href="#share" class="nav__link" id="link">Servicios</a></li>
+                    <li class="nav__item"><a href="#decoration" class="nav__link" id="link">Sobre mi</a></li>
+                    <li class="nav__item"><a href="#accessory" class="nav__link" id="link">Trabajos</a></li>
+                    <li class="nav__item"><a href="#accessory" class="nav__link" id="link">Contacto</a></li>
                 </ul>
             </div>
             <div class="nav__toggle" id="nav-toggle">
@@ -37,6 +38,15 @@
 
     <main>
         <section class="slider">
+            <div class="wave" style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150"
+                    preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path 
+                    d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;">
+                    </path>
+                </svg>
+            </div>
             <div class="slider--content">
                 <button class="slider__btn-left">
                     <i class='bx bxs-chevron-left'></i>
@@ -55,10 +65,11 @@
             <div data-aos="fade-right">
                 <h2 class="section-title">Presentación</h2>
                 <div class="home__container">
-                    <p class="about__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ex autem ad, praesentium laudantium
+                    <p class="home__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ex autem ad, praesentium
+                        laudantium
                         at totam accusantium vel explicabo repellendus dolor corrupti nisi ipsa, aut voluptas temporibus
-                        nesciunt, rem voluptatum?
+                        nesciunt, rem voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis beatae, aperiam culpa velit recusandae fuga, doloribus quod enim inventore ea dicta esse perspiciatis corrupti voluptate. Ducimus rem quae maxime aperiam?
                     </p>
                 </div>
             </div>
@@ -72,14 +83,16 @@
     </main>
 
     <footer class="footer">
+        <div class="wave__footer-top" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #fff;"></path></svg>
+        </div>
         <div class="footer__container">
-            <div class="footer__data">
-                <h2 class="footer__title">ALMENDRA RETAMALES</h2>
+            <div class="footer__data f1">
+                <h2 class="footer__title name">ALMENDRA RETAMALES</h2>
                 <p class="footer__text">Maquilladora Profesional</p>
             </div>
-            <div class="footer__data">
+            <div class="footer__data f2">
                 <h2 class="footer__title">MENÚ</h2>
-                <ul>
+                <ul class="footer__list">
                     <li><a href="#home" class="footer__link">Inicio</a></li>
                     <li><a href="#about" class="footer__link">Sobre mi</a></li>
                     <li><a href="#skills" class="footer__link">Habilidades</a></li>
@@ -87,19 +100,30 @@
                     <li><a href="#Contact" class="footer__link">Contacto</a></li>
                 </ul>
             </div>
-            <div class="footer__data">
+            <div class="footer__data f3">
                 <h2 class="footer__title">SIGUEME</h2>
-                <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-linkedin'></i></a>
             </div>
         </div>
     </footer>
     <div class="footer__rights">
+        <div class="wave__footer-bottom" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150"
+                preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path 
+                d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;">
+                </path>
+            </svg>
+        </div>
         <p class="footer__copy">
             ALMENDRA RETAMALES &#169;
         </p>
-        <a href="https://sebaarl.github.io/portafolio/" class="footer__copy" target="blank">COPYRIGHT&#169; 2022 SEBASTIÁN RIVERA</a>
+        <a href="https://sebaarl.github.io/portafolio/" class="footer__copy" target="blank">COPYRIGHT&#169; 2022
+            SEBASTIÁN RIVERA</a>
     </div>
 
     <script src="/js/main.js"></script>

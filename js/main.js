@@ -5,11 +5,11 @@ const btnRight = document.querySelector(".slider__btn-right")
 
 const sliderImages = [
     {
-        src: "/img/Slider/1.jpg",
+        src: "/img/Slider/1.jpeg",
         text: "Maquillaje Social",
     },
     {
-        src: "/img/Slider/1.jpg",
+        src: "/img/Slider/2.jpeg",
         text: "Maquillaje Medios Visuales",
     },
     {
@@ -115,3 +115,31 @@ function scrollHeader(){
     if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+//JQUERY
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if($(window).width() >= 768) {
+            if($(this).scrollTop() >= 200) {
+                $('.nav__link').hover(function () {
+                    $(this).css('color', '#8e8f8e')
+                        
+                    }, function () {
+                        $(this).css('color', '#FEFBFB')
+                    }
+                );
+
+                $(selector).after(content);
+
+            } else {
+                $('.nav__link').hover(function () {
+                    $(this).css('color', '#F4BFBF')
+                        
+                    }, function () {
+                        $(this).css('color', '#FEFBFB')
+                    }
+                );
+            }
+        }
+    })
+})
