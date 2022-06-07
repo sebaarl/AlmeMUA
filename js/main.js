@@ -87,13 +87,13 @@ btnLeft.addEventListener("click", function () {
 
 startSlider()
 
-/*==================== MENU MOBILE ====================*/
-const showMenu = (toggleId, navId) =>{
+//MENÚ
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
     
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
+    if (toggle && nav) {
+        toggle.addEventListener('click', ()=> {
             nav.classList.toggle('show-menu')
         })
     }
@@ -102,17 +102,16 @@ showMenu('nav-toggle','nav-menu')
 
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
-function scrollHeader(){
+function scrollHeader() {
     const nav = document.getElementById('header')
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    if (this.scrollY >= 100) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
@@ -120,7 +119,7 @@ window.addEventListener('scroll', scrollHeader)
 $(document).ready(function() {
     $(window).scroll(function() {
         if($(window).width() >= 768) {
-            if($(this).scrollTop() >= 200) {
+            if($(this).scrollTop() >= 100) {
                 $('.nav__link').hover(function () {
                     $(this).css('color', '#8e8f8e')
                         

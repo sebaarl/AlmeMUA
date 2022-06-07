@@ -165,7 +165,9 @@ body {
     background: var(--first-color);
     border-radius: 50%;
     z-index: 10;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .1);
+    /* box-shadow: 4px 4px 4px rgba(0, 0, 0, .1); */
+    -webkit-box-shadow: 8px 7px 15px 5px rgba(0,0,0,0.44); 
+    box-shadow: 8px 7px 15px 5px rgba(0,0,0,0.44);
 }
 
 .scrolltop__icon {
@@ -210,6 +212,9 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     letter-spacing: .5rem;
+    /* text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.37); */
+    /* text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.62); */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.62);
 }
 
 .slider__btn-right, .slider__btn-left {
@@ -229,8 +234,9 @@ body {
     color: var(--body-color);
     outline: none;
     font-weight: 700;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 2.5rem;
     cursor: pointer;
+    letter-spacing: .3rem;
 }
 
 .slider--btn:hover {
@@ -241,7 +247,7 @@ body {
 
 .wave{
     position: absolute;
-    bottom: -60px;
+    bottom: -40px;
     width: 100%;
 }
 
@@ -345,7 +351,6 @@ main {
 .footer__container{
     row-gap: 2rem;
     margin-top: 40px;
-    margin-bottom: 40px;
     max-width: 1024px;
     display: grid;
     grid-template-columns: 100%;
@@ -404,21 +409,15 @@ main {
     width: 100%;
 }
 
-.wave__footer-bottom {
-    position: absolute;
-    top: -120px;
-    width: 100%;
-}
-
 .footer__rights {
     text-align: center;
     color: #8a8a8a;
     font-size: .813rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
     position: relative;
     width: 100%;
+    padding: 20px;
 }
 
 .footer__rights a {
@@ -445,6 +444,18 @@ main {
         right: 0;
         top: 3.4rem;
         background-color: var(--body-color);
+    }
+}
+
+@media screen and (min-width: 351px) {
+    .slider--feature p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .slider--feature p {
+        font-size: 2rem;
     }
 }
 
@@ -523,6 +534,7 @@ main {
 
     .footer__data {
         margin-top: 70px;
+        margin-left: 30px;
     }
 
     .footer__title {
@@ -588,6 +600,14 @@ main {
 
     .home__text {
         text-align: center;
+    }
+
+    .slider--feature p {
+        font-size: 4rem;
+    }
+
+    .slider--btn {
+        width: 500px;
     }
 }
 
